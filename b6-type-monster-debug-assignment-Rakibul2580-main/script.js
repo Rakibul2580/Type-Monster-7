@@ -125,7 +125,6 @@ const start = () => {
 
 // START Countdown
 document.addEventListener("click", start);
-// startBtn
 
 // If history exists, show it
 displayHistory();
@@ -134,7 +133,8 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
+  const countPars = parseInt(timeSpent)
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? countPars : 0} seconds`;
 }, 1000);
