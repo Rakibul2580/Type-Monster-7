@@ -17,7 +17,8 @@ body {
 }
 
 #question {
-  height: 100px;
+  min-height: 100px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,20 +27,20 @@ body {
   border-radius: 15px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  92.49deg,
+  rgba(255, 255, 255, 0.1) 0.18%,
+  rgba(255, 255, 255, 0.05) 99.85%
+);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
 }
 
 #display {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 5rem;
+  padding: 20px;
   color: white;
   font-size: 32px;
   background-color: #171717;
@@ -142,30 +143,27 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  line-height: 2;
+  grid-template-columns: repeat(3,1fr);
 }
 
 .card {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   padding: 50px;
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
-  backdrop-filter: blur(5px);
-  margin-bottom: 30px;
-}
+  92.49deg,
+  rgba(255, 255, 255, 0.1) 0.18%,
+  rgba(255, 255, 255, 0.05) 99.85%
+)};
 
 #modal-background {
   background: rgb(255, 255, 255);
@@ -190,3 +188,27 @@ button {
     flex-direction: column;
   }
 }
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  #result {
+    width: 95%;
+    line-height: 2;
+  }
+  button {
+    width: 95%;
+  }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) and (max-width: 991.98px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+ }
