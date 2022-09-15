@@ -99,6 +99,7 @@ const gameOver = () => {
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
+  location.reload()
 };
 
 const start = () => {
@@ -120,7 +121,6 @@ const start = () => {
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
-      return
     }
     count--;
   }, 1000);
