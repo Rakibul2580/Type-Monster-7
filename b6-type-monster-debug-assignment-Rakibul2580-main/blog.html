@@ -7,64 +7,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
   <body>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              #1 What is difference between session storage and local storage?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <p><b>Local Storage:</b> Local Storage is a web storage method that helps us store data on the client's computer in the form of key/value pairs in a web browser. The data is stored in local storage for a lifetime unless the user manually deletes it from the browser. It does not expire even when the user closes the window or tab. Instead, the data remains in the browser until and unless the browser's memory is cleared.<br/>
-                <b>Session Storage:</b> The sessionStorage is very similar to the localStorage. Still, the main difference lies in the lifespan as it persists in the browser until its current tab or session is on. Once you close the tab or terminate the session, the data on session storage also gets lost.</p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                #2 What is difference between global scope and block scope?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p><b>Global Scope:</b> The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.<br/>
-                    <b>Block Scope:</b> Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.</p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                #3 How does event loop work in javascript?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <b>Event Loop:</b> The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.</div>
+      <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                #1 What is difference between session storage and local storage?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p><b>Local Storage:</b> Local Storage is a web storage method that helps us store data on the client's computer in the form of key/value pairs in a web browser. The data is stored in local storage for a lifetime unless the user manually deletes it from the browser. It does not expire even when the user closes the window or tab. Instead, the data remains in the browser until and unless the browser's memory is cleared.<br/>
+                  <b>Session Storage:</b> The sessionStorage is very similar to the localStorage. Still, the main difference lies in the lifespan as it persists in the browser until its current tab or session is on. Once you close the tab or terminate the session, the data on session storage also gets lost.</p>
+              </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                #4 How does event loop work in javascript?
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  #2 What is difference between global scope and block scope?
               </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <p><b>Ways of getting Undefined: There are 8 ways to get undefined. They are</b><br/>
-
-                  <b>1.</b> Accessing an uninitialized variable.<br/>
-                  <b>2.</b> Calling a function which does not return anything.<br/>
-                  <b>3.</b> Calling a function without parameter which uses arguments in it.<br/>
-                  <b>4.</b> Accessing element out of the index boundary in an array.<br/>
-                  <b>5.</b> Accessing non existing property in an object.<br/>
-                  <b>6.</b> Calling a function which has nothing right side of return.<br/>
-                  <b>7.</b> Accessing an deleted element in an array.<br/>
-                  <b>8.</b> Putting directly undefined to a variable.</p>
+                  <p><b>Global Scope:</b> The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.<br/>
+                      <b>Block Scope:</b> Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.</p>
               </div>
             </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  #3 How does event loop work in javascript?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <b>Event Loop:</b> The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.</div>
+              </div>
+              </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  #4 How does event loop work in javascript?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p><b>Ways of getting Undefined: There are 8 ways to get undefined. They are</b><br/>
+  
+                    <b>1.</b> Accessing an uninitialized variable.<br/>
+                    <b>2.</b> Calling a function which does not return anything.<br/>
+                    <b>3.</b> Calling a function without parameter which uses arguments in it.<br/>
+                    <b>4.</b> Accessing element out of the index boundary in an array.<br/>
+                    <b>5.</b> Accessing non existing property in an object.<br/>
+                    <b>6.</b> Calling a function which has nothing right side of return.<br/>
+                    <b>7.</b> Accessing an deleted element in an array.<br/>
+                    <b>8.</b> Putting directly undefined to a variable.</p>
+                </div>
+              </div>
+        </div>
+        </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
